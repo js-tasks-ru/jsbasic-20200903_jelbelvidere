@@ -6,7 +6,7 @@
 function sumSalary(salaries) {
     let sum = 0;
     //перебираем ключи
-    for (let key in salaries) {
+    for (const key in salaries) {
       //если тип = number то true
     if (typeof salaries[key] === "number") {
       // если true, то делаем сумму
