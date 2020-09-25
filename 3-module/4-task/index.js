@@ -14,6 +14,5 @@ function showSalary(users, age) {
     }
   });
   //return new array
-  console.log(sortedArrByAge);
   return (sortedArrByAge.join('\n'));
 }

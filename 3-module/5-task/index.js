@@ -9,7 +9,6 @@ function getMinMax(str) {
   
   let data = str
     .split(/,| /)
-    console.log(data);
 
   data
     .map((item) => {return +item})
