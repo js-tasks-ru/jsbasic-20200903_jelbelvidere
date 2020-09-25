@@ -5,5 +5,15 @@
  * @returns {string}
  */
 function showSalary(users, age) {
-  // ваш код...
+  let sortedArrByAge = [];
+  users.forEach(function(person) {
+    //iteration for object
+    if (person.age <= age) {
+      //should to push to new array
+      return (sortedArrByAge.push(person.name + ', ' + person.balance));
+    }
+  });
+  //return new array
+  console.log(sortedArrByAge);
+  return (sortedArrByAge.join('\n'));
 }
