@@ -3,13 +3,13 @@
  * @returns {string}
  */
 function camelize(str) {
-  /*
-  разбить строку в массив символов split
-  написать две функции:
-  1. через for of найти -, создать переменную с индексом -, и назначить еще одну переменную с индесом -++
-  индекс -++ перевести в апперкейс
-  Continue
-  2. Через for of и условие if (arr.find) найти все символы -, удалить их
-  Методом join собрать все символы обратно в строку
-  */
+  let strArr = str.split('-');
+  let camelArr = strArr.map(function (arrItem, index) {
+  if (index == 0) {
+    return arrItem;
+    } else {
+      return arrItem[0].toUpperCase() + arrItem.slice(1);
+    }
+  });
+  return str = camelArr.join('');
 }

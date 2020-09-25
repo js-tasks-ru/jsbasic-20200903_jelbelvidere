@@ -6,9 +6,9 @@
  */
 function filterRange(arr, a, b) {
   let newArr =[];
-  for (let key of arr) {
-    if (key >=a &&key <= b){
-      newArr.push(key);
+  for (let item of arr) {
+    if (item >=a && item <= b){
+      newArr.push(item);
     }
   }
   return newArr;
