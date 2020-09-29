@@ -4,5 +4,18 @@
  * @returns {{min:number, max:number}}  объект
  */
 function getMinMax(str) {
-  // ваш код...
+  let objCache = [];
+  let objectMaxMin = {};
+  
+  let data = str
+    .split(/,| /)
+
+  data
+    .map((item) => {return +item})
+    .forEach((item) => {if (!isNaN(item)) {objCache.push(item)}})
+
+  return objectMaxMin = {
+    min: Math.min(...objCache),
+    max: Math.max(...objCache),
+  };
 }
