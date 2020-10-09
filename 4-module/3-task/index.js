@@ -3,16 +3,13 @@
  * @param {Element} table
  */
 function highlight(table) {
-    let tableCollection = table.lastElementChild.rows;
+    const tableCollection = table.lastElementChild.rows;
     
 
 
     for (let tableRow of tableCollection) {
-        console.log(tableRow)
         let arrayOfRows = tableRow.children
-        console.log(arrayOfRows)
 
-        //проверка на возраст
         for (let i = 0; i < arrayOfRows.length; i++) {
         if (+arrayOfRows[1].innerHTML < 18) {
             tableRow.classList.add("style");
@@ -20,8 +17,6 @@ function highlight(table) {
             }
         }
         for (let tableData of tableRow.cells) {
-
-            console.log(tableData.innerHTML)
             
                     //Проверка на пол
                 if (tableData.innerHTML === "m") {
@@ -35,17 +30,15 @@ function highlight(table) {
                 //Проверка статуса
             if (tableData.hasAttribute("data-available")) {
                 
-                if (tableData.getAttribute("data-available") == "true") {
+                if (tableData.getAttribute("data-available") === "true") {
                     tableRow.classList.add("available");
                 } else {
                     tableRow.classList.add("unavailable");
                 } 
             }
+        }
 
-        }//конец итерации td
-
-        if (tableRow.classList.contains('available') || tableRow.classList.contains('unavailable')) {
-   
-        } else {tableRow.setAttribute('hidden', "true")}
+        if (tableRow.classList.contains('available') || tableRow.classList.contains('unavailable')) {}
+        else {tableRow.setAttribute('hidden', "true")}
     } 
 }
